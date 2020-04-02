@@ -22,6 +22,7 @@ class WorkoutPage extends React.Component {
     const queries = new URLSearchParams(this.props.location.search);
     const time = queries.get("time");
     const focus = queries.get("focus");
+    const name = queries.get("name");
     const timeInMin = time / SECONDS_IN_ONE_MINUTE;
     const timeInSec = (time / SECONDS_IN_ONE_MINUTE) % timeInMin;
 
@@ -34,6 +35,9 @@ class WorkoutPage extends React.Component {
           <Link to="/home">
             <button aria-label="home-button">Go to Home &#9655;</button>
           </Link>
+        </div>
+        <div>
+          <h3>Hello, {name}</h3>
         </div>
         <div className="workout-timer" aria-label="workout-timer">
           <BaseTimer
@@ -52,7 +56,6 @@ class WorkoutPage extends React.Component {
             startTime={this.state.startTime}
           />
         </div>
-        <div className="bottom-row-render"></div>
       </div>
     );
   }

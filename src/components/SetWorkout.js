@@ -9,7 +9,8 @@ class SetWorkout extends React.Component {
     this.state = {
       displayAbout: false,
       time: 0,
-      focus: ""
+      focus: "",
+      name: ""
     };
   }
 
@@ -25,14 +26,23 @@ class SetWorkout extends React.Component {
     });
   };
 
-  constructQueryString(time, focus, link) {
-    const queryArr = [time, focus];
+  updateName = event => {
+    this.setState({
+      name: event.target.value
+    });
+  };
+
+  constructQueryString(time, focus, name, link) {
+    const queryArr = [time, focus, name];
     var queryURL = link.concat(
       "time=",
       queryArr[0],
       "&",
       "focus=",
-      queryArr[1]
+      queryArr[1],
+      "&",
+      "name=",
+      queryArr[2]
     );
     return queryURL;
   }
@@ -42,6 +52,7 @@ class SetWorkout extends React.Component {
     const queryURL = this.constructQueryString(
       this.state.time,
       this.state.focus,
+      this.state.name,
       link
     );
 
@@ -49,6 +60,10 @@ class SetWorkout extends React.Component {
       <div>
         <div className="workout-params" aria-label="set-workout-params">
           <h4>Set Workout</h4>
+          <input
+            placeholder="enter your name"
+            onChange={this.updateName}
+          ></input>
           <div className="set-time">
             <h3 aria-label="time">
               Time(min): {this.state.time / MIN_IN_SECONDS}
