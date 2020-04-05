@@ -12,7 +12,7 @@ function WorkoutCard(data) {
       <h3>Workout</h3>
       <div className="workout-card__exercises">
         {exercises.map(exercise => (
-          <li>{exercise}</li>
+          <li key={uuid()}>{exercise}</li>
         ))}
       </div>
       <h4>duration: {duration / 60} min</h4>
