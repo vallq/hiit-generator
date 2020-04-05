@@ -50,6 +50,7 @@ class WorkoutPage extends React.Component {
         </div>
         <div className="exercise-card" aria-label="exercise-card">
           <WorkoutGenerator
+            name={name}
             focus={focus}
             time={time}
             duration={EXERCISE_DURATION}
