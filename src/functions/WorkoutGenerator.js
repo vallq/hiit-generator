@@ -5,6 +5,7 @@ import {
 } from "../constants/exerciseData";
 import BaseTimer from "../components/BaseTimer";
 import axios from "../utils/axios";
+import { Link } from "react-router-dom";
 const NUMBER_OF_SETS = 5;
 const EXERCISE_DURATION = 30;
 
@@ -150,9 +151,11 @@ class WorkoutGenerator extends React.Component {
             </h5>
           </div>
           <div>
-            <button onClick={this.postWorkout} aria-label="save-button">
-              Save Workout
-            </button>
+            <Link to="/dashboard">
+              <button onClick={this.postWorkout} aria-label="save-button">
+                Save Workout
+              </button>
+            </Link>
           </div>
         </div>
       </div>
