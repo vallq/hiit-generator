@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 import "../css/SetWorkout.css";
 const MIN_IN_SECONDS = 60;
 
@@ -58,6 +59,7 @@ class SetWorkout extends React.Component {
 
     return (
       <div>
+        <Header title={`RANDOM HIIT GENERATOR`} />
         <div className="workout-params" aria-label="set-workout-params">
           <h4>Set Workout</h4>
           <input

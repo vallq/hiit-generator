@@ -1,17 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 import "../css/Home.css";
 
 const HiitMeUp = () => {
   return (
     <div className="home">
-      <div>
-        <Link to="/set-workout">
-          <button className="hitt-me" aria-label="hmu-button">
-            HIIT ME UP
-          </button>
-        </Link>
-      </div>
+      <Link to="/set-workout">
+        <button className="hitt-me" aria-label="hmu-button">
+          HIIT ME UP
+        </button>
+      </Link>
     </div>
   );
 };
@@ -49,12 +48,18 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <Header title={`click the button below`} />
         <div className="home-box" aria-label="home">
           {!this.state.displayAbout ? HiitMeUp() : About()}
         </div>
-        <button onClick={this.toggleAbout} aria-label="about-button">
-          {!this.state.displayAbout ? "About" : "Go Back"}
-        </button>
+        <div className="about-box">
+          <button onClick={this.toggleAbout} aria-label="about-button">
+            {!this.state.displayAbout ? "about" : "go back"}
+          </button>
+          <Link to="/dashboard">
+            <button aria-label="dashboard-button">dashboard</button>
+          </Link>
+        </div>
       </div>
     );
   }

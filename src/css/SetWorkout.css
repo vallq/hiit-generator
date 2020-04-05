@@ -1,13 +1,11 @@
-.header {
-    margin-bottom:4em;
-}
-
 .workout-params {
   display: block;
-  width: 340px;
-  height: 260px;
+  width: 25em;
+  height: 16em;
   justify-content: center;
   margin: auto;
+  padding-top: 5em;
+  text-align: center;
   color: #ffffff;
   border: 3px solid #ce5555;
   background-color: #ce5555;
@@ -46,14 +44,13 @@
   width: 82.5px;
   height: 30px;
   margin: 2em 1.8em 2.5em 2.4em;
-  background-color: #5f9ea0;
+  background-color:  rgba(67, 62, 14, 1);
   display: inline-block;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #5f9ea0;
   border: none;
   border-radius: 12px;
   box-shadow: 0 5px #999999;

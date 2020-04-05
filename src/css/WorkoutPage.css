@@ -1,3 +1,11 @@
+h3 {
+  display: flex;
+  flex-direction: row;
+  color: #2d2d2d;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
 .workout-timer {
   display: flex;
   flex-direction: row;
@@ -5,36 +13,48 @@
   color: #2d2d2d;
   align-items: center;
   justify-content: center;
-  border: 1px solid #2d2d2d;
+  padding: 0;
+  margin: 0;
 }
 
 .next-exercise-render {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.next-exercise-render button{
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #0f0f0f;
+  background-color:rgba(237, 238, 192, 1);;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px #999999;
 }
 
 .workout-page__nav-buttons {
-  direction: flex;
-  flex-direction: row;
-  padding: 1.2em;
-  margin: 0em 0em 0em 0em;
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
 }
 
 .workout-page__nav-buttons button {
   width: 11em;
   height: 2.2em;
-  margin: 2em 1.8em 2.5em 2.4em;
-  padding: 0em;
-  background-color: #5f9ea0;
+  margin: 2em 1em 2.5em 2em;
   display: inline-block;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #5f9ea0;
+  background-color: rgba(67, 62, 14, 1);
   border: none;
   border-radius: 12px;
   box-shadow: 0 5px #999999;
@@ -54,22 +74,32 @@
 }
 
 .current-exercise-render {
-  background-color: #549092;
-  padding-top: 2.5em;
+  background-color: #ce5555;
+  width: 80%;
+  padding-top: 2em;
+  padding-bottom: 1.5em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 .exercise-card h3 {
-  margin: 0;
+  margin: auto;
   padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  color: #ffffff;
 }
 
 .exercise-timer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 1px solid #2d2d2d;
+  margin: auto;
+  width: 80%;
+  background-color: #ce5555;
 }
 .exercise-timer h1 {
-  margin: 0.3em;
-  color: #2d2d2d;
+  margin-bottom: 1em;
+  margin-top: 0em;
+  color: #ffffff;
 }

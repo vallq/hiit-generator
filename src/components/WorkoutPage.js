@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BaseTimer from "./BaseTimer";
-import "../css/WorkoutPage.css";
+import Header from "./Header";
 import WorkoutGenerator from "../functions/WorkoutGenerator.js";
+import "../css/WorkoutPage.css";
+
 const SECONDS_IN_ONE_MINUTE = 60;
 const EXERCISE_DURATION = 30;
 const EXERCISE_MIN = 0;
@@ -28,6 +30,7 @@ class WorkoutPage extends React.Component {
 
     return (
       <div aria-label="workout-page">
+        <Header title={`RANDOM HIIT GENERATOR`} />
         <div className="workout-page__nav-buttons">
           <Link to="/set-workout">
             <button aria-label="reset-button">&#9665; Reset Workout</button>

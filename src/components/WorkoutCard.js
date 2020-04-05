@@ -9,14 +9,15 @@ function WorkoutCard(data) {
   return (
     <div key={key} className="workout-card">
       <h2>{name}</h2>
-      <h3>Workout</h3>
+      <h3>workout</h3>
       <div className="workout-card__exercises">
         {exercises.map(exercise => (
           <li key={uuid()}>{exercise}</li>
         ))}
       </div>
-      <h4>duration: {duration / 60} min</h4>
-      <h4>{date}</h4>
+      <h4>
+        duration: {duration / 60} min <br /> {date}
+      </h4>
     </div>
   );
 }

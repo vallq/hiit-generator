@@ -149,8 +149,6 @@ class WorkoutGenerator extends React.Component {
               Next Exercise: <br></br>{" "}
               {this.state.exerciseNames[this.state.nextIndex]}
             </h5>
-          </div>
-          <div>
             <Link to="/dashboard">
               <button onClick={this.postWorkout} aria-label="save-button">
                 Save Workout

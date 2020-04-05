@@ -1,14 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import axios from "../utils/axios";
+import Header from "./Header";
 import WorkoutCard from "./WorkoutCard";
+import "./Dashboard.css";
 
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userQuery: "",
-      status: "",
-      isLoading: false,
       workoutData: [],
       errorMessage: ""
     };
@@ -40,8 +40,14 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <h3> HIIT ME UP Board</h3>
-        <div></div>
+        <div>
+          <Header title={"HIIT ME UP BOARD"} />
+          <div className="dashboard__nav">
+            <Link to="/set-workout">
+              <button aria-label="hmu-button">HIIT ME UP</button>
+            </Link>
+          </div>
+        </div>
         <div className="dashboard">
           {this.state.workoutData.map(workout => WorkoutCard(workout))}
         </div>
