@@ -1,5 +1,5 @@
 import React from "react";
-import "./WorkoutCard.css";
+import "../css/WorkoutCard.css";
 import { uuid } from "uuidv4";
 
 function WorkoutCard(data) {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "../utils/axios";
 import Header from "./Header";
 import WorkoutCard from "./WorkoutCard";
-import "./Dashboard.css";
+import "../css/Dashboard.css";
 
 class Dashboard extends React.Component {
   constructor(props) {
