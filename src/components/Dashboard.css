@@ -1,0 +1,22 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.dashboard__title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.dashboard__searchbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 0.5em;
+}
