@@ -32,13 +32,18 @@ class BaseTimer extends React.Component {
   changeTimerState = (currTime, startTime, timeDuration) => {
     const timeLeft =
       timeDuration - (currTime - startTime) / MILLISECONDS_IN_ONE_SECOND;
+    let mins = Math.floor(timeLeft / ONE_MINUTE_IN_SECONDS);
+    let secs = Math.ceil(timeLeft % ONE_MINUTE_IN_SECONDS);
+    if (secs === 60) {
+      secs = 0;
+      mins = mins + 1;
+    }
     this.setState({
-      ...this,
-      minutes: Math.floor(timeLeft / ONE_MINUTE_IN_SECONDS),
-      seconds: Math.floor(timeLeft % ONE_MINUTE_IN_SECONDS),
+      minutes: mins,
+      seconds: secs,
       timeLeft: Math.floor(timeLeft)
     });
-    return true;
+    return;
   };
 
   setExerciseInterval() {
