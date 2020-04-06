@@ -102,6 +102,7 @@ class WorkoutPage extends React.Component {
         dateTimeObj: date.toString()
       };
       await axios.post("/dashboard", workoutToPost);
+      this.componentWillUnmount();
     } catch (err) {
       if (err.response.status === 400) {
         alert("Bad request!");
