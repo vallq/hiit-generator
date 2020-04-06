@@ -2,12 +2,18 @@
   display: inline-block;
   font-size: 16px;
   border: 1px solid grey;
-  background:rgba(237, 238, 192, 1);
-  color: #0f0f0f;
+  background:#ce5555;
+  color: #fefefe;
   width: 14em;
   border-radius: 10px;
   margin: 0.3em;
+  padding-top: 0.7em;
   box-shadow: 6px 6px 2px 1px#666666;
+  text-align: center;
+}
+
+.workout-card h2, h3{
+  color: #fefefe;
   text-align: center;
 }
 

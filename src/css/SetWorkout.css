@@ -1,10 +1,22 @@
+.set-time {
+  margin: auto;
+  padding: 0.8em;
+}
+
 .workout-params {
-  display: block;
-  width: 25em;
-  height: 16em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.set-workout-card {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 90%;
   justify-content: center;
   margin: auto;
-  padding-top: 5em;
+  margin-top: 7em;
   text-align: center;
   color: #ffffff;
   border: 3px solid #ce5555;
@@ -12,8 +24,16 @@
   box-shadow: 12px 12px 2px 1px#666666;
 }
 
+.input-field {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 0.8em;
+  width: 50%;
+}
+
 .workout-params h3 {
-    color: #e6ca71
+  color: #e6ca71;
 }
 .workout-params button {
   width: 83px;
@@ -36,15 +56,14 @@
   direction: flex;
   flex-direction: row;
   padding: 1.8em;
-  margin: 1.5em 0em 0em 0em;
-  
+  margin: auto;
 }
 
 .workout-params__nav-buttons button {
   width: 82.5px;
   height: 30px;
   margin: 2em 1.8em 2.5em 2.4em;
-  background-color:  rgba(67, 62, 14, 1);
+  background-color:#71bdc0;
   display: inline-block;
   cursor: pointer;
   text-align: center;

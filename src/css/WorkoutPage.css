@@ -1,4 +1,4 @@
-h3 {
+h3, h2, h1 {
   display: flex;
   flex-direction: row;
   color: #2d2d2d;
@@ -6,36 +6,15 @@ h3 {
   padding: 0;
   margin: 0;
 }
-.workout-timer {
+
+.top-render {
+  margin-bottom: 1em;
+}
+.timer {
   display: flex;
   flex-direction: row;
-  flex: 1;
-  color: #2d2d2d;
-  align-items: center;
   justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-.next-exercise-render {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.next-exercise-render button{
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #0f0f0f;
-  background-color:rgba(237, 238, 192, 1);;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 5px #999999;
+  margin: auto;
 }
 
 .workout-page__nav-buttons {
@@ -54,7 +33,7 @@ h3 {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: rgba(67, 62, 14, 1);
+  background-color:#71bdc0;
   border: none;
   border-radius: 12px;
   box-shadow: 0 5px #999999;
@@ -75,31 +54,63 @@ h3 {
 
 .current-exercise-render {
   background-color: #ce5555;
-  width: 80%;
-  padding-top: 2em;
-  padding-bottom: 1.5em;
+  width: 60%;
+  padding-top: 0.6em;
+  padding-bottom: 1em;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 6px 6px 2px 1px#666666;
 }
+
 .exercise-card h3 {
   margin: auto;
-  padding-top: 0.5em;
+  padding-top: 0.2em;
   color: #ffffff;
 }
 
-.exercise-timer {
+.current-exercise-render iframe {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   margin: auto;
-  width: 80%;
-  background-color: #ce5555;
+  padding-top: 0.6em;
+  border: none;
+  overflow: hidden;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
-.exercise-timer h1 {
-  margin-bottom: 1em;
-  margin-top: 0em;
+
+.current-exercise-render h1 {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
   color: #ffffff;
+}
+
+.next-exercise-render {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-exercise-render button {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #0f0f0f;
+  background-color: rgba(237, 238, 192, 1);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px #999999;
 }

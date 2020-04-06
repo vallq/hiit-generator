@@ -61,44 +61,48 @@ class SetWorkout extends React.Component {
       <div>
         <Header title={`RANDOM HIIT GENERATOR`} />
         <div className="workout-params" aria-label="set-workout-params">
-          <h4>Set Workout</h4>
-          <input
-            placeholder="enter your name"
-            onChange={this.updateName}
-          ></input>
-          <div className="set-time">
-            <h3 aria-label="time">
-              Time(min): {this.state.time / MIN_IN_SECONDS}
-            </h3>
-            <div className="set-time__buttons">
-              <button
-                value={900}
-                onClick={this.handleTimeClick}
-                aria-label="15-min-button"
-              >
-                15min
-              </button>
+          <div className="set-workout-card">
+            <h2>Set Workout</h2>
+            <input
+              className="input-field"
+              placeholder="enter your name"
+              onChange={this.updateName}
+            ></input>
+            <div className="set-time">
+              <h3 aria-label="time">
+                Time(min): {this.state.time / MIN_IN_SECONDS}
+              </h3>
+              <div className="set-time__buttons">
+                <button
+                  value={900}
+                  onClick={this.handleTimeClick}
+                  aria-label="15-min-button"
+                >
+                  15min
+                </button>
+              </div>
+            </div>
+            <div className="set-focus">
+              <h3 aria-label="focus">Focus: {this.state.focus}</h3>
+              <div className="set-focus__buttons">
+                <button
+                  value="upper body"
+                  onClick={this.handleFocusClick}
+                  aria-label="upper-body-button"
+                >
+                  upper body
+                </button>
+                <button
+                  value="lower body"
+                  onClick={this.handleFocusClick}
+                  aria-label="lower-body-button"
+                >
+                  lower body
+                </button>
+              </div>
             </div>
           </div>
-          <div className="set-focus">
-            <h3 aria-label="focus">Focus: {this.state.focus}</h3>
-            <div className="set-focus__buttons">
-              <button
-                value="upper body"
-                onClick={this.handleFocusClick}
-                aria-label="upper-body-button"
-              >
-                upper body
-              </button>
-              <button
-                value="lower body"
-                onClick={this.handleFocusClick}
-                aria-label="lower-body-button"
-              >
-                lower body
-              </button>
-            </div>
-          </div>
+
           <div className="workout-params__nav-buttons" aria-label="home-button">
             <Link to="/home">
               <button>&#9665; Home</button>
