@@ -16,8 +16,16 @@ class WorkoutPage extends React.Component {
     this.state = {
       exerciseMin: EXERCISE_MIN,
       exerciseSec: EXERCISE_DURATION,
-      startTime: startTime
+      startTime: startTime,
+      mounted: false
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      startTime: Date.now(),
+      mounted: true
+    });
   }
 
   render() {
@@ -27,6 +35,25 @@ class WorkoutPage extends React.Component {
     const name = queries.get("name");
     const timeInMin = time / SECONDS_IN_ONE_MINUTE;
     const timeInSec = (time / SECONDS_IN_ONE_MINUTE) % timeInMin;
+
+    if (!this.state.mounted) {
+      return (
+        <div>
+          <Header title={`RANDOM HIIT GENERATOR`} />
+          <div className="workout-page__nav-buttons">
+            <Link to="/set-workout">
+              <button aria-label="reset-button">&#9665; Reset Workout</button>
+            </Link>
+            <Link to="/home">
+              <button aria-label="home-button">Go to Home &#9655;</button>
+            </Link>
+          </div>
+          <div>
+            <h3>Unable to access workout page at the moment</h3>
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div aria-label="workout-page">
