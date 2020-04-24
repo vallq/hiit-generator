@@ -22,6 +22,7 @@
   border: 3px solid #ce5555;
   background-color: #ce5555;
   box-shadow: 12px 12px 2px 1px#666666;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .input-field {
@@ -34,6 +35,7 @@
 
 .workout-params h3 {
   color: #e6ca71;
+  font-family: "Fjalla One", sans-serif;
 }
 .workout-params button {
   width: 83px;
@@ -73,6 +75,7 @@
   border: none;
   border-radius: 12px;
   box-shadow: 0 5px #999999;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .workout-params__nav-buttons button:hover {
@@ -86,4 +89,22 @@
   background-color: #417274;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+
+@media only screen and (max-width: 450px) {
+  .set-workout-card {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 90%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 9em;
+    text-align: center;
+    color: #ffffff;
+    border: 3px solid #ce5555;
+    background-color: #ce5555;
+    box-shadow: 12px 12px 2px 1px#666666;
+  }
 }

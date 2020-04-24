@@ -134,7 +134,7 @@ class WorkoutPage extends React.Component {
   renderHeaderAndNav() {
     return (
       <div>
-        <Header title={`HIIT ME UP GENERATOR`} />
+        <Header title={`WORK THOSE MUSCLES`} />
         <div className="workout-page__nav-buttons">
           <Link to="/set-workout">
             <button aria-label="reset-button">&#9665; Reset Workout</button>
@@ -166,7 +166,7 @@ class WorkoutPage extends React.Component {
       <div aria-label="workout-page">
         {this.renderHeaderAndNav()}
         <div className="top-render">
-          <h2>Hello, {this.state.name}</h2>
+          <h2>hello, {this.state.name}</h2>
           <div className="timer" aria-label="workout-timer">
             <BaseTimer
               minutes={timeInMin}
@@ -207,10 +207,10 @@ class WorkoutPage extends React.Component {
           </div>
           <div className="bottom-row">
             <div className="next-exercise-render">
-              <h5>
+              <h4>
                 next exercise: <br></br>{" "}
                 {this.state.exerciseNames[this.state.nextIndex]}
-              </h5>
+              </h4>
               <Link to="/dashboard">
                 <button onClick={this.postWorkout} aria-label="save-button">
                   Save Workout

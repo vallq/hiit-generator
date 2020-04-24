@@ -11,25 +11,25 @@ class SetWorkout extends React.Component {
       displayAbout: false,
       time: 0,
       focus: "",
-      name: ""
+      name: "",
     };
   }
 
-  handleTimeClick = event => {
+  handleTimeClick = (event) => {
     this.setState({
-      time: event.target.value
+      time: event.target.value,
     });
   };
 
-  handleFocusClick = event => {
+  handleFocusClick = (event) => {
     this.setState({
-      focus: event.target.value
+      focus: event.target.value,
     });
   };
 
-  updateName = event => {
+  updateName = (event) => {
     this.setState({
-      name: event.target.value
+      name: event.target.value,
     });
   };
 
@@ -59,7 +59,7 @@ class SetWorkout extends React.Component {
 
     return (
       <div>
-        <Header title={`RANDOM HIIT GENERATOR`} />
+        <Header title={`HIIT ME UP GENERATOR`} />
         <div className="workout-params" aria-label="set-workout-params">
           <div className="set-workout-card">
             <h2>Set Workout</h2>

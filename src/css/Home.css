@@ -7,13 +7,14 @@ font-family: 'Do Hyeon', sans-serif;*/
   flex-direction: row;
   align-items: center;
   margin: auto;
-  padding-top: 6em;
+  padding-top: 7em;
 }
 
 .home-box button {
   height: 30px;
   margin: auto;
   display: flex;
+  font-family: "Fjalla One", sans-serif;
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -36,8 +37,8 @@ font-family: 'Do Hyeon', sans-serif;*/
   transform: translateY(4px);
 }
 
-p {
-  width: 30em;
+.about p {
+  width: 80%;
   text-align: center;
   margin: auto;
 }
@@ -53,4 +54,14 @@ p {
   background-color: #ffffff;
   border: none;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 300px) {
+  .home-box {
+    direction: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    padding-top: 10em;
+  }
 }

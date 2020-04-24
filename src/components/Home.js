@@ -20,8 +20,8 @@ const About = () => {
     <div className="about" aria-label="about-info">
       {
         <p>
-          HIIT ME UP is an exercise generator that makes getting that next
-          workout done effortlessly &#9786; Please feel free to send your
+          HIIT ME UP is a random exercise generator that makes getting that next
+          workout done effortlessly &#9786; <br></br> Please feel free to send your
           feedback for improvements or other features{" "}
           <a href="mailto:vallq@outlook.com">here</a>!
         </p>
@@ -48,7 +48,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Header title={`click the button below`} />
+        <Header title={`CLICK THE BUTTON`} />
         <div className="home-box" aria-label="home">
           {!this.state.displayAbout ? HiitMeUp() : About()}
         </div>

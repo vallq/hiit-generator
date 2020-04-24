@@ -2,8 +2,8 @@
   display: inline-block;
   font-size: 16px;
   border: 1px solid grey;
-  background:#ce5555;
-  color: #fefefe;
+  background: #f5b766;
+  color: #0d0d0d;
   width: 14em;
   border-radius: 10px;
   margin: 0.3em;
@@ -12,9 +12,10 @@
   text-align: center;
 }
 
-.workout-card h2, h3{
-  color: #fefefe;
+.workout-card h2, h3, h4{
+  color: #0d0d0d;
   text-align: center;
+  font-family: "Fjalla One", sans-serif;
 }
 
 .workout-card__exercises {

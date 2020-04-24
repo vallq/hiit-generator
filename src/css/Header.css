@@ -6,4 +6,18 @@
   padding: 1em 0em 1em 0em;
   width: 100%;
   z-index: 2;
+  font-family: 'Fugaz One', cursive;
+}
+
+@media only screen and (max-width: 450px) {
+  .header {
+    background:rgba(237, 238, 192, 1);
+    color: #0f0f0f;
+    position: fixed;
+    top: 0;
+    padding: 1em 0em 1em 0em;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+  }
 }
