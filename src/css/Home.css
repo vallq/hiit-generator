@@ -49,8 +49,8 @@ p {
 }
 
 .about-box button {
+  display: flex;
   background-color: #ffffff;
-  text-align: center;
   border: none;
   text-decoration: underline;
 }
