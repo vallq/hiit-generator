@@ -9,6 +9,8 @@ With this initial version, users can:
 - save a workout to a public dashboard
 - reset an ongoing workout
 
+![](hiit-generator.gif)
+
 ### `Stack:`
 
 - Express
