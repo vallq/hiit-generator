@@ -1,4 +1,6 @@
-h3, h2, h1 {
+h3,
+h2,
+h1 {
   display: flex;
   flex-direction: row;
   color: #2d2d2d;
@@ -34,7 +36,7 @@ h3, h2, h1 {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color:#71bdc0;
+  background-color: #71bdc0;
   border: none;
   border-radius: 12px;
   box-shadow: 0 5px #999999;
@@ -56,7 +58,7 @@ h3, h2, h1 {
 
 .current-exercise-render {
   background-color: #ce5555;
-  width: 60%;
+  width: 80%;
   padding-top: 0.5em;
   padding-bottom: 1em;
   margin: auto;
@@ -107,7 +109,7 @@ h3, h2, h1 {
 
 .next-exercise-render h4 {
   margin: 0.8em;
-  color: #000000
+  color: #000000;
 }
 
 .next-exercise-render button {
@@ -122,5 +124,21 @@ h3, h2, h1 {
   border-radius: 12px;
   box-shadow: 0 5px #999999;
   padding: 0.5em;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
+}
+
+@media only screen and (max-width: 350px) {
+  .top-render {
+    margin-bottom: 0em;
+    font-family: "Fugaz One", cursive;
+  }
+  .workout-page__nav-buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+  }
+
+  .workout-page__nav-buttons button {
+    width: 8em;
+  }
 }

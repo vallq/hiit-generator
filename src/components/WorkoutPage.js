@@ -229,8 +229,7 @@ class WorkoutPage extends React.Component {
           <div className="bottom-row">
             <div className="next-exercise-render">
               <h4>
-                next exercise: <br></br>{" "}
-                {this.state.exerciseNames[this.state.nextIndex]}
+                next exercise: {this.state.exerciseNames[this.state.nextIndex]}
               </h4>
               {this.showSaveWorkout()}
             </div>
