@@ -4,7 +4,7 @@ import BaseTimer from "./BaseTimer";
 import Header from "./Header";
 import {
   upperBodyExerciseData,
-  lowerBodyExerciseData
+  lowerBodyExerciseData,
 } from "../constants/exerciseData";
 import axios from "../utils/axios";
 import "../css/WorkoutPage.css";
@@ -27,7 +27,7 @@ class WorkoutPage extends React.Component {
       exerciseNames: [],
       gifNames: [],
       currentIndex: 0,
-      nextIndex: 1
+      nextIndex: 1,
     };
     this.workoutIntervalId = 0;
   }
@@ -48,7 +48,7 @@ class WorkoutPage extends React.Component {
     }
 
     this.setState({
-      gifNames: gifNames
+      gifNames: gifNames,
     });
 
     return exercises;
@@ -71,7 +71,7 @@ class WorkoutPage extends React.Component {
         );
       }
       default: {
-        throw new Error("No Exercise Generated");
+        alert("No Exercise Generated");
       }
     }
   };
@@ -85,9 +85,29 @@ class WorkoutPage extends React.Component {
       }
       this.setState({
         currentIndex: currIdx,
-        nextIndex: nextIdx
+        nextIndex: nextIdx,
       });
     }, 30000);
+  };
+
+  updateTimeLeft = () => {
+    this.setState({
+      timeLeft: 0,
+    });
+  };
+
+  showSaveWorkout = () => {
+    if (this.state.timeLeft === 0) {
+      return (
+        <Link to="/dashboard">
+          <button onClick={this.postWorkout} aria-label="save-button">
+            Save Workout
+          </button>
+        </Link>
+      );
+    } else {
+      return "You can only save when time is up! Push on!";
+    }
   };
 
   postWorkout = async () => {
@@ -99,7 +119,7 @@ class WorkoutPage extends React.Component {
         duration: this.state.time,
         date: date.toDateString(),
         time: date.toLocaleTimeString(),
-        dateTimeObj: date.toString()
+        dateTimeObj: date.toString(),
       };
       await axios.post("/dashboard", workoutToPost);
       this.componentWillUnmount();
@@ -122,7 +142,7 @@ class WorkoutPage extends React.Component {
       name: name,
       focus: focus,
       time: time,
-      exerciseNames: this.generateWorkout(time, focus)
+      exerciseNames: this.generateWorkout(time, focus),
     });
     this.workoutIntervalId = this.updateExerciseInterval();
   }
@@ -174,6 +194,7 @@ class WorkoutPage extends React.Component {
               duration={this.state.time}
               startTime={this.state.startTime}
               isExerciseTimer={false}
+              updateTimeLeft={this.updateTimeLeft}
             />
           </div>
         </div>
@@ -211,11 +232,7 @@ class WorkoutPage extends React.Component {
                 next exercise: <br></br>{" "}
                 {this.state.exerciseNames[this.state.nextIndex]}
               </h4>
-              <Link to="/dashboard">
-                <button onClick={this.postWorkout} aria-label="save-button">
-                  Save Workout
-                </button>
-              </Link>
+              {this.showSaveWorkout()}
             </div>
           </div>
         </div>
