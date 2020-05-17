@@ -77,6 +77,7 @@ class BaseTimer extends React.Component {
       );
       if (this.state.timeLeft < 0) {
         this.setTimeToZero();
+        this.props.updateTimeLeft();
       }
     }, 1000);
   }
