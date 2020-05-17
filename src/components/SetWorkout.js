@@ -12,6 +12,7 @@ class SetWorkout extends React.Component {
       time: 0,
       focus: "",
       name: "",
+      canGenerate: false,
     };
   }
 
@@ -48,15 +49,35 @@ class SetWorkout extends React.Component {
     return queryURL;
   }
 
-  render() {
-    const link = "./workout?";
-    const queryURL = this.constructQueryString(
-      this.state.time,
-      this.state.focus,
-      this.state.name,
-      link
-    );
+  showGenerateButton = () => {
+    if (
+      this.state.name.length > 0 &&
+      this.state.time > 0 &&
+      this.state.focus.length > 0
+    ) {
+      const link = "./workout?";
+      const queryURL = this.constructQueryString(
+        this.state.time,
+        this.state.focus,
+        this.state.name,
+        link
+      );
+      return (
+        <Link to={queryURL}>
+          <button
+            className="workout-params__generate-button"
+            aria-label="generate-button"
+          >
+            Generate &#9655;
+          </button>
+        </Link>
+      );
+    } else {
+      return <p>fill in missing fields</p>;
+    }
+  };
 
+  render() {
     return (
       <div>
         <Header title={`HIIT ME UP GENERATOR`} />
@@ -107,14 +128,7 @@ class SetWorkout extends React.Component {
             <Link to="/home">
               <button>&#9665; Home</button>
             </Link>
-            <Link to={queryURL}>
-              <button
-                className="workout-params__generate-button"
-                aria-label="generate-button"
-              >
-                Generate &#9655;
-              </button>
-            </Link>
+            {this.showGenerateButton()}
           </div>
         </div>
       </div>
